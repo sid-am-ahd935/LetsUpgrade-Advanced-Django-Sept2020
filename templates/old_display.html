@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+  {% for post in posts %}
+    <div class= "container p-3 my-3 bg-dark text-white">
+      <h3> {{post.blogtitle}} </h3>
+      
+      <p>
+        <p class= "bg-secondary text-white">
+          {{post.blogcontent}}
+        </p>
+        {{post.blogdate}}
+      </p>
+    </div>
+  {% endfor %}
+  
+{% endblock %}

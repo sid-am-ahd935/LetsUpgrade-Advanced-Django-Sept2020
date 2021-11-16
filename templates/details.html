@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class= "container p-3 my-3 bg-dark text-white">
+      <h2> System Details </h2>
+      
+      <p>
+        <p class= "bg-secondary text-white">
+        <h4> Files & Folders </h4>
+          {% for each in details.ls %}
+          {{each}} <br>
+          {% endfor %}
+        </p>
+        <p class= "bg-secondary text-white">
+        <h4> Current Directory </h4>
+          {{details.cwd}}
+        </p>
+        <p class= "bg-secondary text-white">
+        <h4> Write Available</h4>
+          {{details.write}}
+        </p>
+        
+      </p>
+    </div>
+  
+{% endblock %}
